@@ -1,0 +1,127 @@
+{
+  "research": [
+    {
+      "id": "nowcasting-gdp-ml",
+      "category": "publications",
+      "title": "Forecasting cryptocurrencies log-returns: a LASSO-VAR and sentiment approach",
+      "excerpt": "We observe a significant increase in forecast accuracy in terms of MDA when using sentiment and attention variables as predictors, but only for less capitalized cryptocurrencies.",
+      "abstract": "Cryptocurrencies have become a trendy topic recently, primarily due to their disruptive potential and reports of unprecedented returns. Furthermore, social media has garnered attention for its predictive capabilities in various fields, including financial markets and the economy. In this study, we exploit the predictive power of sentiment from Twitter and Reddit, alongside Google Trends indexes, to forecast log returns for 10 cryptocurrencies, namely Bitcoin, Ethereum, Tether, Binance Coin, Litecoin, Enjin Coin, Horizen, Namecoin, Peercoin and Feathercoin. We evaluate the performance of LASSO Vector Autoregression using daily data from January 2018 to January 2022. In a 30-day recursive forecast, we achieve a mean directional accuracy (MDA) rate of over 50%. Moreover, we observe a significant increase in forecast accuracy in terms of MDA when using sentiment and attention variables as predictors, but only for less capitalized cryptocurrencies. This improvement is not reflected in the RMSE. We also conduct a Granger causality test using post-double LASSO selection for high-dimensional VAR models. Our results suggest that social media sentiment does not Granger-cause cryptocurrencies returns.",
+      "date": "2024",
+      "type": "Journal Article",
+      "status": "Published",
+      "venue": "Applied Economics",
+      "authors": ["M. Ciganovic", "F D'Amario"],
+      "keywords": ["cryptocurrencies", "sentiment", "attention", "machine learning", "VAR", "Granger causality"],
+      "links": [
+        {
+          "type": "Paper",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/00036846.2023.2289930"
+        }
+      ]
+    },
+    {
+      "id": "causal-policy-evaluation",
+      "category": "working-papers",
+      "title": "Causal Machine Learning for Policy Evaluation: A Double/Debiased ML Approach",
+      "excerpt": "Implementing double/debiased machine learning methods for robust causal inference in policy evaluation, with applications to labor market interventions and fiscal policy assessment.",
+      "abstract": "This study advances the field of causal inference by implementing and extending double/debiased machine learning (DML) methods for policy evaluation in complex, high-dimensional settings. Our framework addresses the fundamental problem of estimating treatment effects when both the treatment assignment mechanism and outcome equations are unknown and potentially non-linear. We develop a comprehensive methodology that combines cross-fitting procedures with modern ML algorithms including gradient boosting, neural networks, and ensemble methods to estimate nuisance parameters while maintaining asymptotic properties required for valid causal inference. The approach is specifically designed to handle common challenges in policy evaluation including selection on observables, high-dimensional confounding, and heterogeneous treatment effects. We demonstrate the effectiveness of our method through extensive Monte Carlo simulations and two empirical applications: evaluating the causal impact of job training programs on employment outcomes and assessing the effectiveness of fiscal stimulus measures during economic downturns. Results show substantial improvements in bias reduction and confidence interval coverage compared to traditional methods.",
+      "date": "2024",
+      "type": "Working Paper",
+      "status": "Under Review",
+      "venue": "Review of Economic Studies",
+      "authors": ["F. Researcher", "Dr. Causal", "Prof. Policy"],
+      "keywords": ["causal inference", "double ML", "policy evaluation", "treatment effects", "high-dimensional", "cross-fitting"],
+      "links": [
+        {
+          "type": "Preprint",
+          "url": "#"
+        },
+        {
+          "type": "Code",
+          "url": "#"
+        },
+        {
+          "type": "Slides",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "heterogeneous-treatment-effects",
+      "category": "publications",
+      "title": "Estimating Heterogeneous Treatment Effects with Causal Forest Methods",
+      "excerpt": "Developing causal forest algorithms for identifying heterogeneous treatment effects in economic interventions, with focus on optimal policy targeting and subgroup analysis.",
+      "abstract": "Heterogeneous treatment effects are ubiquitous in economic policy interventions, yet traditional econometric methods often focus on average treatment effects, potentially missing crucial insights for optimal policy design. This research develops and implements causal forest methodologies specifically tailored for economic applications, enabling researchers and policymakers to identify and understand treatment effect heterogeneity across different population subgroups. Our approach extends the generalized random forest framework to handle common challenges in economic data including endogenous treatment assignment, clustered observations, and multiple treatment arms. We introduce novel variable importance measures that help identify key dimensions of heterogeneity and develop statistical tests for treatment effect heterogeneity that maintain valid type I error control. The methodology is complemented by interpretable visualization tools that facilitate communication of results to policymakers. Empirical applications include analyzing heterogeneous effects of minimum wage policies across different labor markets, educational interventions across student demographics, and housing assistance programs across geographic regions. Our findings reveal substantial heterogeneity in treatment effects and demonstrate how targeted policies can achieve significantly better outcomes than uniform interventions.",
+      "date": "2023",
+      "type": "Journal Article",
+      "status": "Published",
+      "venue": "Journal of Econometrics",
+      "authors": ["F. Researcher", "Dr. Forest", "Prof. Hetero"],
+      "keywords": ["causal forest", "heterogeneous treatment effects", "machine learning", "policy targeting", "subgroup analysis", "random forest"],
+      "links": [
+        {
+          "type": "Paper",
+          "url": "#"
+        },
+        {
+          "type": "Code",
+          "url": "#"
+        },
+        {
+          "type": "Replication",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-controls-ml",
+      "category": "other",
+      "title": "Machine Learning Enhanced Synthetic Control Methods for Economic Analysis",
+      "excerpt": "Integrating machine learning techniques with synthetic control methods to improve causal inference in comparative case studies and policy evaluation with limited control units.",
+      "abstract": "Synthetic control methods have emerged as a powerful tool for causal inference in settings with limited control units, but traditional approaches face challenges in handling high-dimensional data and non-linear relationships between units and outcomes. This research develops a machine learning enhanced synthetic control framework that addresses these limitations while maintaining the interpretability and causal identification strengths of the original method. Our approach incorporates elastic net regularization for automated variable selection, kernel methods for capturing non-linear relationships, and cross-validation procedures for optimal hyperparameter selection. We extend the framework to handle time-varying treatment effects, multiple treated units, and staggered adoption settings common in policy evaluation. The methodology includes robust statistical inference procedures using permutation-based tests and bootstrap confidence intervals that account for the machine learning estimation uncertainty. Extensive simulation studies demonstrate superior performance compared to traditional synthetic control methods, particularly in high-dimensional settings with complex underlying relationships. Empirical applications include evaluating the economic impact of Brexit on the UK economy, assessing the effects of carbon pricing policies across different jurisdictions, and analyzing the impact of technology adoption on productivity growth across industries.",
+      "date": "2023",
+      "type": "Conference Paper",
+      "status": "Published",
+      "venue": "NBER Summer Institute",
+      "authors": ["F. Researcher", "Dr. Synthetic", "Prof. Controls"],
+      "keywords": ["synthetic control", "machine learning", "causal inference", "policy evaluation", "comparative studies", "kernel methods"],
+      "links": [
+        {
+          "type": "Paper",
+          "url": "#"
+        },
+        {
+          "type": "Presentation",
+          "url": "#"
+        },
+        {
+          "type": "Code",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "nowcasting-inflation-textual",
+      "category": "working-papers",
+      "title": "Nowcasting Inflation Using Textual Data and Natural Language Processing",
+      "excerpt": "Leveraging news articles, central bank communications, and social media data to nowcast inflation dynamics using advanced NLP techniques and neural networks.",
+      "abstract": "Traditional inflation forecasting relies primarily on lagged economic indicators, limiting the ability to capture rapidly evolving price dynamics. This research develops an innovative nowcasting framework that incorporates textual information from diverse sources including news articles, central bank communications, earnings call transcripts, and social media posts to provide real-time inflation predictions. Our methodology employs state-of-the-art natural language processing techniques including transformer-based language models (BERT, RoBERTa) to extract inflation-relevant signals from unstructured text data. We develop a multi-source text aggregation system that weights different information sources based on their predictive power and reliability. The framework includes sentiment analysis, topic modeling, and named entity recognition components specifically calibrated for economic and financial content. Advanced neural network architectures combining LSTM layers for temporal modeling with attention mechanisms for text processing enable the model to capture complex relationships between textual information and inflation dynamics. Evaluation using high-frequency inflation measures demonstrates significant improvements in nowcasting accuracy, particularly during periods of economic uncertainty when traditional models struggle. The system provides interpretable insights into the key textual drivers of inflation expectations, offering valuable intelligence for monetary policymakers.",
+      "date": "2024",
+      "type": "Working Paper",
+      "status": "In Progress",
+      "venue": "American Economic Review",
+      "authors": ["F. Researcher", "Dr. NLP", "Prof. Inflation"],
+      "keywords": ["inflation nowcasting", "natural language processing", "textual data", "neural networks", "BERT", "monetary policy"],
+      "links": [
+        {
+          "type": "Draft",
+          "url": "#"
+        },
+        {
+          "type": "Code",
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}
