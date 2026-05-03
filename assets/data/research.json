@@ -115,44 +115,6 @@
       ]
     },
     {
-      "id": "misbelieved-uncertainty-inflation",
-      "category": "working-papers",
-      "title": "A Misbelieved Uncertainty-driven Inflation",
-      "excerpt": "Investigates how ex-ante uncertainty in professional inflation forecasts affects recent inflation dynamics using a monthly VAR with heteroskedasticity-based identification.",
-      "abstract": "We investigate how ex-ante uncertainty in inflation professional forecasts affects recent inflation dynamics using a monthly VAR with heteroskedasticity-based identification. We find that uncertainty about expected inflation increases both inflation and unemployment, even when consensus forecasts remain sticky. Our results show that unfunded fiscal shocks (fiscal expansions accommodated by the central bank) account for a large share of recent inflation dynamics through uncertainty's amplifying role. Counterfactual analysis reveals that uncertainty has stronger medium-term effects, particularly on unemployment outcomes.",
-      "date": "2024",
-      "type": "Working Paper",
-      "status": "Working Paper",
-      "venue": "",
-      "authors": ["F. D'Amario", "M. Ciganovic (Sapienza)", "V. Patella (Sapienza)"],
-      "keywords": ["inflation uncertainty", "VAR", "heteroskedasticity", "fiscal shocks", "monetary policy", "professional forecasts"],
-      "links": [
-        {
-          "type": "Preprint",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "id": "tourist-presence-export",
-      "category": "working-papers",
-      "title": "Tourist Presence and Export: An Instrumental Variable and Panel VAR Analysis for Italy",
-      "excerpt": "A 1% rise in tourist presence corresponds to a ~0.89% boost in Italian exports. Tourism shocks account for 8–10% of export fluctuations, identified using scheduled flights as an instrument.",
-      "abstract": "This study examines how foreign tourists affect Italian export performance over 2008–2022 for 45 partner countries. Using both an IV-augmented panel regression (with scheduled flights as an instrument for tourist numbers) and a panel VAR, we find that a 1% rise in tourist presence corresponds to roughly a 0.89% boost in exports, and that shocks to tourism and exports mutually reinforce each other—tourism shocks alone account for about 8–10% of export fluctuations over time.",
-      "date": "2025",
-      "type": "Working Paper",
-      "status": "Under Review",
-      "venue": "",
-      "authors": ["F. D'Amario", "S. Di Sanzo (Confcommercio)", "M. Bella (Confcommercio)"],
-      "keywords": ["tourism", "exports", "instrumental variables", "panel VAR", "Italy", "trade"],
-      "links": [
-        {
-          "type": "Preprint",
-          "url": "#"
-        }
-      ]
-    },
-    {
       "id": "carbon-penalized-ppi",
       "category": "other",
       "title": "Optimal Design of Carbon-Penalized Proportional Portfolio Insurance Strategies in a Partially Observable Market Model",
