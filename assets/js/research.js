@@ -1,5 +1,162 @@
 // Research page functionality with sidebar layout
 
+const RESEARCH_DATA = [
+  {
+    id: "reverse-cross-fitting-dml",
+    category: "working-papers",
+    title: "Double Machine Learning for Time Series",
+    excerpt: "Modifies the Double Machine Learning estimator for macroeconomic time-series settings using Reverse Cross-Fitting, improving efficiency and robustness to model misspecification. We propose a calibration rule targeting a 'Goldilocks zone', a region of tuning parameters that delivers stable, partialled-out signals and reduced small-sample bias.",
+    abstract: "We modify the Double Machine Learning estimator to broaden its applicability to macroeconomic time-series settings. A deterministic cross-fitting step, termed Reverse Cross-Fitting, leverages the time-reversibility of stationary series to improve sample utilization and efficiency. We detail and prove the conditions under which the estimator is asymptotically valid. We then demonstrate, through simulations, that its performance remains valid in realistic finite samples and is robust to model misspecification and violations of assumptions, such as heteroskedasticity. In high dimensions, predictive metrics for tuning nuisance learners do not generally minimize bias in the causal score. We propose a calibration rule targeting a 'Goldilocks zone', a region of tuning parameters that delivers stable, partialled-out signals and reduced small-sample bias. Finally, we apply our procedure to residualized Local Projections to estimate the dynamic effects of a rise in Tier 1 regulatory capital. The results underscore the usefulness of the methodology for inference in macroeconomic applications.",
+    date: "2026",
+    type: "Working Paper",
+    status: "R&R",
+    venue: "",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "M. Tancioni (Sapienza)"],
+    keywords: ["double/debiased machine learning", "cross-fitting", "time series", "causal inference", "local projections", "capital regulation"],
+    links: [{ type: "Preprint", url: "https://arxiv.org/abs/2603.10999" }]
+  },
+  {
+    id: "boe-bank-capital-regulation",
+    category: "working-papers",
+    title: "The Economic Effects of Shocks to Bank Capital Regulation: Evidence from the United Kingdom",
+    excerpt: "Uses a structural VAR with sign and narrative restrictions to assess how prudential capital shocks affect UK lending and macroeconomic activity. A 100bp Tier 1 capital ratio increase causes a 0.18pp GDP contraction.",
+    abstract: "We use a structural VAR with sign and narrative restrictions to assess prudential capital shocks' effects on UK lending and macroeconomic activity. We base narrative restrictions on 2014-2016 stress test events. We find that banks comply primarily by reducing risk-weighted assets rather than raising capital, with corporate lending contracting more than household lending, and a 100 basis point Tier 1 capital ratio increase causing a 0.18 percentage point GDP contraction. We demonstrate significant state-dependent effects and provide evidence that tighter capital requirements temporarily reduce banking sector competition.",
+    date: "2026",
+    type: "Staff Working Paper",
+    status: "Published",
+    venue: "Bank of England Staff Working Paper",
+    authors: ["F. D'Amario", "W.B. Francis (Bank of England)", "S. De-Ramon (Bank of England)"],
+    keywords: ["bank capital regulation", "macroprudential policy", "structural VAR", "UK", "lending", "banking competition"],
+    links: [{ type: "Paper", url: "https://www.bankofengland.co.uk/working-paper/2026/the-economic-effects-of-changes-to-bank-capital-regulation-evidence-from-the-uk" }]
+  },
+  {
+    id: "news-driven-coincident-index",
+    category: "working-papers",
+    title: "News-Driven Coincident Index: High-Frequency Monitoring of the Italian Economy Using Transformers",
+    excerpt: "A transformer-based coincident economic indicator for Italy built from 2.5 million news tweets (2012–2022). The sentiment index tracks real GDP more accurately than benchmarks, especially during COVID-19.",
+    abstract: "We introduce a transformer-based coincident economic indicator for Italy, built from 2.5 million news tweets (2012–2022). Our sentiment index, derived via cosine distance of aggregated article embeddings, tracks real GDP more accurately and timely than benchmarks, especially during COVID-19.",
+    date: "2024",
+    type: "Working Paper",
+    status: "Working Paper",
+    venue: "",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "T. Aliaj (European Central Bank)"],
+    keywords: ["nowcasting", "transformers", "NLP", "coincident index", "Italy", "GDP", "news sentiment"],
+    links: [{ type: "Preprint", url: "#" }]
+  },
+  {
+    id: "misbelieved-uncertainty-inflation",
+    category: "working-papers",
+    title: "A Misbelieved Uncertainty-driven Inflation",
+    excerpt: "Investigates how ex-ante uncertainty in professional inflation forecasts affects recent inflation dynamics using a monthly VAR with heteroskedasticity-based identification.",
+    abstract: "We investigate how ex-ante uncertainty in inflation professional forecasts affects recent inflation dynamics using a monthly VAR with heteroskedasticity-based identification. We find that uncertainty about expected inflation increases both inflation and unemployment, even when consensus forecasts remain sticky. Our results show that unfunded fiscal shocks (fiscal expansions accommodated by the central bank) account for a large share of recent inflation dynamics through uncertainty's amplifying role. Counterfactual analysis reveals that uncertainty has stronger medium-term effects, particularly on unemployment outcomes.",
+    date: "2024",
+    type: "Working Paper",
+    status: "Working Paper",
+    venue: "",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "V. Patella (Sapienza)"],
+    keywords: ["inflation uncertainty", "VAR", "heteroskedasticity", "fiscal shocks", "monetary policy", "professional forecasts"],
+    links: [{ type: "Preprint", url: "#" }]
+  },
+  {
+    id: "tourist-presence-export",
+    category: "working-papers",
+    title: "Tourist Presence and Export: An Instrumental Variable and Panel VAR Analysis for Italy",
+    excerpt: "A 1% rise in tourist presence corresponds to a ~0.89% boost in Italian exports. Tourism shocks account for 8–10% of export fluctuations, identified using scheduled flights as an instrument.",
+    abstract: "This study examines how foreign tourists affect Italian export performance over 2008–2022 for 45 partner countries. Using both an IV-augmented panel regression (with scheduled flights as an instrument for tourist numbers) and a panel VAR, we find that a 1% rise in tourist presence corresponds to roughly a 0.89% boost in exports, and that shocks to tourism and exports mutually reinforce each other — tourism shocks alone account for about 8–10% of export fluctuations over time.",
+    date: "2025",
+    type: "Working Paper",
+    status: "Under Review",
+    venue: "",
+    authors: ["F. D'Amario", "S. Di Sanzo (Confcommercio)", "M. Bella (Confcommercio)"],
+    keywords: ["tourism", "exports", "instrumental variables", "panel VAR", "Italy", "trade"],
+    links: [{ type: "Preprint", url: "#" }]
+  },
+  {
+    id: "crypto-lasso-var",
+    category: "publications",
+    title: "Forecasting Cryptocurrencies Log-Returns: a LASSO-VAR and Sentiment Approach",
+    excerpt: "Using LASSO-VAR with Twitter, Reddit sentiment and Google Trends to forecast log-returns of ten cryptocurrencies. Sentiment boosts directional accuracy for smaller, less capitalized currencies.",
+    abstract: "Using daily data from January 2018 to January 2022, this study employs Twitter and Reddit sentiment alongside Google Trends indices within a LASSO-VAR framework to forecast the log-returns of ten cryptocurrencies. In 30-day recursive forecasts, the model achieves over 50% mean directional accuracy and shows that adding sentiment and attention variables significantly boosts accuracy for smaller, less capitalized currencies. This improvement is not reflected in the RMSE. A post-double-LASSO Granger-causality analysis further reveals that social-media sentiment does not Granger-cause cryptocurrency returns.",
+    date: "2023",
+    type: "Journal Article",
+    status: "Published",
+    venue: "Applied Economics",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)"],
+    keywords: ["cryptocurrencies", "sentiment", "LASSO-VAR", "forecasting", "Granger causality", "machine learning"],
+    links: [{ type: "Paper", url: "https://www.tandfonline.com/doi/abs/10.1080/00036846.2023.2289930" }]
+  },
+  {
+    id: "inflationary-shocks-green-transition",
+    category: "publications",
+    title: "Inflationary Shocks, Economic Aggregates and Households' Green Transition: a Causal Machine-Learning Analysis Using Mixed-Frequency Data",
+    excerpt: "Investigates the causal effects of inflation on household economic indicators, labour markets, and energy-saving housing infrastructure adoption using causal machine learning with mixed-frequency data.",
+    abstract: "This paper aims to investigate the causal effects of inflation on household economic indicators, unemployment rates, and other critical labour market indicators. Furthermore, we seek to explore the causal impact of inflation on the adoption of energy-saving housing infrastructure policies, with the goal of providing valuable insights into the wider implications of this critical economic phenomenon.",
+    date: "2024",
+    type: "Peer Reviewed Article",
+    status: "Published",
+    venue: "Publications Office of the European Union",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "M. Tancioni (Sapienza)"],
+    keywords: ["inflation", "causal machine learning", "mixed-frequency data", "green transition", "labour market", "household"],
+    links: [{ type: "Paper", url: "https://op.europa.eu/publication-detail/-/publication/a26def09-3e64-11ef-ab8f-01aa75ed71a1" }]
+  },
+  {
+    id: "housing-price-living-conditions",
+    category: "publications",
+    title: "Housing Price Triggers and Living Conditions in the EU: Insights from a Structural Dynamic Analysis",
+    excerpt: "Examines drivers of real house price variability across 20 Euro Area countries (2005–2023) using a Bayesian Structural Panel VAR and assesses housing price impacts on living conditions.",
+    abstract: "This study examines the main factors influencing real house price index (HPI) variability in 20 Euro Area countries from 2005 to 2023 using a Bayesian Structural Panel Vector Autoregression (S-PVAR). It identifies structural drivers of house price shocks, differentiating them from supply-side (productivity, labor) and demand-side shocks (private investment, monetary policy). Local Projections are used to assess the impact of housing prices on ten living condition indicators from EU-SILC data. The findings indicate that demand-side shocks drive a persistent increase in HPI, while house price shocks result in long-term market changes and affect living conditions, particularly in Northern and Southern EA countries.",
+    date: "2025",
+    type: "Peer Reviewed Article",
+    status: "Forthcoming",
+    venue: "Publications Office of the European Union",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "M. Tancioni (Sapienza)"],
+    keywords: ["house prices", "Bayesian PVAR", "Euro Area", "living conditions", "local projections", "structural VAR"],
+    links: [{ type: "Paper", url: "https://op.europa.eu/publication-detail/-/publication/dbb08046-91de-11f0-97c8-01aa75ed71a1" }]
+  },
+  {
+    id: "carbon-penalized-ppi",
+    category: "other",
+    title: "Optimal Design of Carbon-Penalized Proportional Portfolio Insurance Strategies in a Partially Observable Market Model",
+    excerpt: "Studies optimal PPI strategies that hedge downside risk while penalizing carbon risk, with stochastic filtering transforming the partial-information problem into a full-information one for a CRRA investor.",
+    abstract: "We study optimal proportional-portfolio-insurance (PPI) strategies that hedge downside risk while preserving upside potential, explicitly penalizing carbon risk. Risky asset prices follow geometric Brownian motions whose drifts depend on an unobservable economy-wide factor; using stochastic filtering, we transform the partial-information problem into a full-information one and solve it for a CRRA investor. We derive closed-form, carbon-penalized PPI allocations under both information regimes and quantify the utility loss from incomplete information.",
+    date: "2025",
+    type: "Work in Progress",
+    status: "Work in Progress",
+    venue: "",
+    authors: ["F. D'Amario", "K. Colaneri (Tor Vergata)", "D. Mancinelli (Tor Vergata)"],
+    keywords: ["portfolio insurance", "carbon risk", "stochastic filtering", "partial information", "CRRA", "green finance"],
+    links: []
+  },
+  {
+    id: "monetary-policy-causal-ml",
+    category: "other",
+    title: "Monetary Policy Identification via Causal Machine Learning in a High-Dimensional Time Series Controls Set",
+    excerpt: "Develops a time-series DML estimator with reverse-time cross-fitting to identify monetary policy shocks, controlling for high-dimensional confounders and obtaining puzzle-free transmission results.",
+    abstract: "We develop a time-series double/debiased machine learning estimator with reverse-time cross-fitting to efficiently identify monetary policy shocks. By controlling for high-dimensional confounders and focusing on unpredictable interest rate movements, we obtain puzzle-free transmission results aligned with recent monetary policy empirical literature.",
+    date: "2024",
+    type: "Work in Progress",
+    status: "Work in Progress",
+    venue: "",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "M. Tancioni (Sapienza)"],
+    keywords: ["monetary policy", "double/debiased machine learning", "causal inference", "high-dimensional", "time series", "interest rates"],
+    links: []
+  },
+  {
+    id: "machines-rise-or-fall",
+    category: "other",
+    title: "Machines: Rise or Fall?",
+    excerpt: "Evaluates the finite-sample properties of machine-learning-based inference methods to assess whether their purported benefits hold in practice, providing a practical manual for researchers.",
+    abstract: "We evaluate the finite-sample properties of machine-learning-based inference methods to assess whether the purported benefits of these techniques hold in practice. Building on recent theoretical insights, we provide a practical manual that guides researchers in applying these methods most effectively.",
+    date: "2024",
+    type: "Work in Progress",
+    status: "Work in Progress",
+    venue: "",
+    authors: ["F. D'Amario", "M. Ciganovic (Sapienza)", "G. Ragusa (Sapienza)"],
+    keywords: ["machine learning inference", "finite-sample", "simulation study", "causal inference", "econometrics"],
+    links: []
+  }
+];
+
 class ResearchManager {
     constructor() {
         this.researchData = [];
@@ -34,20 +191,7 @@ class ResearchManager {
     }
     
     async loadResearchData() {
-        try {
-            // Use relative path that works from research subdirectory
-            const response = await fetch('../assets/data/research.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            this.researchData = data.research || [];
-        } catch (error) {
-            console.error('Failed to load research data:', error);
-            // Fallback to empty array if data loading fails
-            this.researchData = [];
-            throw error;
-        }
+        this.researchData = RESEARCH_DATA;
     }
     
     renderResearchList() {
