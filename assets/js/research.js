@@ -169,18 +169,18 @@ class ResearchManager {
         if (this.researchDetail) {
             this.researchDetail.innerHTML = `
                 <div class="research-welcome">
-                    <h2>Applied Econometrics Research</h2>
-                    <p>Methodological contributions to causal inference, nowcasting, and policy evaluation through the integration of econometric theory and machine learning techniques.</p>
+                    <h2>Research</h2>
+                    <p>Select a paper from the sidebar to view its abstract, authors, and links.</p>
                     <div style="margin-top: 2rem; padding: 1.5rem; background: #111827; border: 1px solid #1f2937; border-radius: 4px;">
-                        <h4 style="margin-bottom: 1rem; color: #f8fafc;">Current Focus Areas</h4>
+                        <h4 style="margin-bottom: 1rem; color: #f8fafc;">Research Interests</h4>
                         <ul style="margin: 0; padding-left: 1.5rem; color: #94a3b8; line-height: 1.8; font-size: 0.9rem;">
                             <li>Double/debiased machine learning for causal inference</li>
-                            <li>Real-time GDP nowcasting with alternative data</li>
-                            <li>Heterogeneous treatment effects in policy evaluation</li>
-                            <li>High-frequency econometric modeling</li>
+                            <li>Macroeconometrics and forecasting</li>
+                            <li>Macroprudential policy and banking regulation</li>
+                            <li>High-dimensional time series and nowcasting</li>
+                            <li>Bayesian econometrics</li>
                         </ul>
                     </div>
-                    <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b;">Select a publication from the sidebar to view detailed abstracts and methodological contributions.</p>
                 </div>
             `;
         }
@@ -489,18 +489,18 @@ class ResearchManager {
             if (this.researchDetail) {
                 this.researchDetail.innerHTML = `
                     <div class="research-welcome">
-                        <h2>Applied Econometrics Research</h2>
-                        <p>Methodological contributions to causal inference, nowcasting, and policy evaluation through the integration of econometric theory and machine learning techniques.</p>
+                        <h2>Research</h2>
+                        <p>Select a paper from the sidebar to view its abstract, authors, and links.</p>
                         <div style="margin-top: 2rem; padding: 1.5rem; background: #111827; border: 1px solid #1f2937; border-radius: 4px;">
-                            <h4 style="margin-bottom: 1rem; color: #f8fafc;">Current Focus Areas</h4>
+                            <h4 style="margin-bottom: 1rem; color: #f8fafc;">Research Interests</h4>
                             <ul style="margin: 0; padding-left: 1.5rem; color: #94a3b8; line-height: 1.8; font-size: 0.9rem;">
                                 <li>Double/debiased machine learning for causal inference</li>
-                                <li>Real-time GDP nowcasting with alternative data</li>
-                                <li>Heterogeneous treatment effects in policy evaluation</li>
-                                <li>High-frequency econometric modeling</li>
+                                <li>Macroeconometrics and forecasting</li>
+                                <li>Macroprudential policy and banking regulation</li>
+                                <li>High-dimensional time series and nowcasting</li>
+                                <li>Bayesian econometrics</li>
                             </ul>
                         </div>
-                        <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b;">Select a publication from the sidebar to view detailed abstracts and methodological contributions.</p>
                     </div>
                 `;
             }
