@@ -34,7 +34,7 @@
       "links": [
         {
           "type": "Paper",
-          "url": "#"
+          "url": "https://op.europa.eu/publication-detail/-/publication/a26def09-3e64-11ef-ab8f-01aa75ed71a1"
         }
       ]
     },
@@ -53,26 +53,26 @@
       "links": [
         {
           "type": "Paper",
-          "url": "#"
+          "url": "https://op.europa.eu/publication-detail/-/publication/dbb08046-91de-11f0-97c8-01aa75ed71a1"
         }
       ]
     },
     {
       "id": "reverse-cross-fitting-dml",
       "category": "working-papers",
-      "title": "Reverse Cross-Fitting: Double/Debiased Machine Learning for Time Series",
-      "excerpt": "Introduces Reverse Cross-Fitting, a technique leveraging time reversibility to perform cross-fitting in DML for time series. Particularly effective for small samples and highly autocorrelated series.",
-      "abstract": "This paper introduces an innovative technique called Reverse Cross-Fitting, designed to be used alongside double debiased machine learning in time series applications. The proposed technique leverages the time reversibility of time series data to perform cross-fitting. Through an extensive simulation study, we show that Reverse Cross-Fitting is particularly well-suited for small sample sizes and outperforms benchmark techniques when dealing with highly autocorrelated time series. We apply double-debiased machine learning with reverse cross-fitting and Local Projections to estimate both the average and dynamic causal impact of an increase in total regulatory capital on Italian GDP. The average effect is moderately negative. Impulse-response analysis shows an initially not statistically significant impact on GDP, followed by a moderate, temporary downturn. These results align with recent empirical findings on prudential capital shocks.",
-      "date": "2024",
+      "title": "Double Machine Learning for Time Series",
+      "excerpt": " Modifies the Double Machine Learning estimator for macroeconomic time-series settings using Reverse Cross-Fitting, improving efficiency and robustness to model misspecification. We propose a calibration rule targeting a "Goldilocks zone", a region of tuning parameters that delivers stable, partialled-out signals and reduced small-sample bias.",
+      "abstract": "We modify the Double Machine Learning estimator to broaden its applicability to macroeconomic time-series settings. A deterministic cross-fitting step, termed Reverse Cross-Fitting, leverages the time-reversibility of stationary series to improve sample utilization and efficiency. We detail and prove the conditions under which the estimator is asymptotically valid. We then demonstrate, through simulations, that its performance remains valid in realistic finite samples and is robust to model misspecification and violations of assumptions, such as heteroskedasticity. In high dimensions, predictive metrics for tuning nuisance learners do not generally minimize bias in the causal score. We propose a calibration rule targeting a "Goldilocks zone", a region of tuning parameters that delivers stable, partialled-out signals and reduced small-sample bias. Finally, we apply our procedure to residualized Local Projections to estimate the dynamic effects of a rise in Tier 1 regulatory capital. The results underscore the usefulness of the methodology for inference in macroeconomic applications.",
+      "date": "2026",
       "type": "Working Paper",
-      "status": "Job Market Paper",
+      "status": "R&R",
       "venue": "",
-      "authors": ["F. D'Amario"],
+      "authors": ["F. D'Amario", "M. Ciganovic (Sapienza)", "M. Tancioni (Sapienza)"],
       "keywords": ["double/debiased machine learning", "cross-fitting", "time series", "causal inference", "local projections", "capital regulation"],
       "links": [
         {
           "type": "Preprint",
-          "url": "#"
+          "url": "https://arxiv.org/abs/2603.10999"
         }
       ]
     },
@@ -83,15 +83,15 @@
       "excerpt": "Uses a structural VAR with sign and narrative restrictions to assess how prudential capital shocks affect UK lending and macroeconomic activity. A 100bp Tier 1 capital ratio increase causes a 0.18pp GDP contraction.",
       "abstract": "We use a structural VAR with sign and narrative restrictions to assess prudential capital shocks' effects on UK lending and macroeconomic activity. We base narrative restrictions on 2014-2016 stress test events. We find that banks comply primarily by reducing risk-weighted assets rather than raising capital, with corporate lending contracting more than household lending, and a 100 basis point Tier 1 capital ratio increase causing a 0.18 percentage point GDP contraction. We demonstrate significant state-dependent effects and provide evidence that tighter capital requirements temporarily reduce banking sector competition.",
       "date": "2025",
-      "type": "Staff Working Paper",
-      "status": "Forthcoming",
+      "type": "Working Paper",
+      "status": "",
       "venue": "Bank of England Staff Working Paper",
       "authors": ["F. D'Amario", "W.B. Francis (Bank of England)", "S. De-Ramon (Bank of England)"],
       "keywords": ["bank capital regulation", "macroprudential policy", "structural VAR", "UK", "lending", "banking competition"],
       "links": [
         {
           "type": "Preprint",
-          "url": "#"
+          "url": "https://www.bankofengland.co.uk/working-paper/2026/the-economic-effects-of-changes-to-bank-capital-regulation-evidence-from-the-uk"
         }
       ]
     },
